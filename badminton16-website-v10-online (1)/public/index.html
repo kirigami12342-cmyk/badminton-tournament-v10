@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>V10 Online • Giải Cầu Lông CLB Kiến Trúc Việt 2026 — 16 Đội</title>
+  <meta name="description" content="Website Giải Cầu Lông CLB Kiến Trúc Việt 2026: 16 đội, bốc thăm, thể lệ 4 vòng, nhánh thắng A, nhánh thua B và chung kết tổng." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">KTV</div>
+        <div><strong>KIẾN TRÚC VIỆT</strong><span>BADMINTON CLUB • 2026</span></div>
+      </div>
+      <nav>
+        <button class="nav-link active" data-target="overview">⌂ <span>Tổng quan</span></button>
+        <button class="nav-link" data-target="teams">♟ <span>16 đội thi đấu</span></button>
+        <button class="nav-link" data-target="draw">⟳ <span>Bốc thăm</span></button>
+        <button class="nav-link" data-target="groups">▦ <span>Sơ đồ thi đấu</span></button>
+        <button class="nav-link" data-target="schedule">◷ <span>Lịch thi đấu</span></button>
+        <button class="nav-link" data-target="bracket">⌘ <span>Nhánh A / B</span></button>
+        <button class="nav-link" data-target="rules">ⓘ <span>Thể lệ</span></button>
+      </nav>
+      <div class="sidebar-footer">
+        <span class="live-dot"></span>
+        <div><b>Giải sắp diễn ra</b><small>26/08/2026 • Check-in 19:00</small><small id="sharedSyncStatus">☁ Đang kết nối dữ liệu chung…</small></div>
+      </div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn">☰</button>
+        <div>
+          <p class="eyebrow">GIẢI CẦU LÔNG CLB KIẾN TRÚC VIỆT • 16 ĐỘI</p>
+          <h1>Giải Cầu Lông CLB Kiến Trúc Việt 2026</h1>
+        </div>
+        <div class="top-actions">
+          <div class="date-pill">📅 26.08.2026 • 4 VÒNG</div>
+          <button class="primary" onclick="document.querySelector('[data-target=schedule]').click()">Xem lịch đấu</button>
+        </div>
+      </header>
+
+      <section class="page active" id="overview">
+        <div class="hero">
+          <div class="hero-copy">
+            <span class="tag">🏸 SMASH TRƯỚC ĐÃ!</span>
+            <h2>16 ĐỘI.<br><em>1 NHÀ VÔ ĐỊCH.</em></h2>
+            <p>Giải Cầu Lông CLB Kiến Trúc Việt 2026 — 16 đội, 4 vòng đấu, 3 sân thi đấu và 1 nhà vô địch. Vòng 1 phân đội vào Nhánh Thắng A hoặc Nhánh Thua B, sau đó đấu tứ kết nhánh, bán kết, chung kết nhánh và chung kết tổng.</p>
+            <div class="hero-actions">
+              <button class="primary" onclick="document.querySelector('[data-target=draw]').click()">Bốc thăm ngay →</button>
+              <button class="ghost" onclick="document.querySelector('[data-target=bracket]').click()">Xem sơ đồ đấu</button>
+            </div>
+          </div>
+          <div class="hero-scorecard">
+            <div class="scorecard-head"><span>TRẬN MỞ MÀN</span><span class="live">VÒNG 1 • 07:30–08:00</span></div>
+            <div class="team-row"><div><span class="mini-logo">Đ1</span><b id="heroTeamA1">Falcon Smash</b></div><strong>—</strong></div>
+            <div class="sets"><span>CHỜ</span><span>THI</span><span>ĐẤU</span></div>
+            <div class="divider"></div>
+            <div class="team-row"><div><span class="mini-logo purple">Đ2</span><b id="heroTeamB1">Thunder Shuttle</b></div><strong>—</strong></div>
+            <div class="sets"><span>SÂN</span><span>ĐỨC</span><span>THẢO</span></div>
+            <div class="court">SÂN 01 • VÒNG 1 • 26/08/2026</div>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <article><span>ĐỘI THAM DỰ</span><strong>16</strong><small>8 cặp đấu ở Vòng 1</small></article>
+          <article><span>TỔNG SỐ TRẬN</span><strong>23</strong><small>8 + 8 + 6 + 1 trận</small></article>
+          <article><span>VÒNG THI ĐẤU</span><strong>4</strong><small>Từ phân nhánh đến Chung kết tổng</small></article>
+          <article><span>SÂN THI ĐẤU</span><strong>3</strong><small>Luân phiên theo từng lượt</small></article>
+        </div>
+
+        <div class="section-head event-section-head"><div><span class="eyebrow">THÔNG TIN CHÍNH THỨC</span><h3>Giải Cầu Lông CLB Kiến Trúc Việt 2026</h3><p>Thông tin cập nhật theo poster giải đấu.</p></div><button class="text-btn" onclick="document.querySelector('[data-target=rules]').click()">Xem thể lệ →</button></div>
+        <div class="event-info-layout">
+          <article class="event-poster-card"><img src="event-poster.jpg" alt="Poster Giải Cầu Lông CLB Kiến Trúc Việt 2026"></article>
+          <div class="event-info-grid">
+            <article><span>⏰ THỜI GIAN</span><strong>19:30 • Thứ Tư • 26/08/2026</strong><small>Check-in từ 19:00</small></article>
+            <article><span>📍 ĐỊA ĐIỂM</span><strong>Sân Cầu lông Đức Thảo</strong><small>18 Đ. Tam Trinh, Tổ Dân Phố Số 20, Hoàng Mai, Hà Nội</small></article>
+            <article><span>👕 DRESSCODE</span><strong>Đỏ & Trắng</strong><small>Mặc đẹp để còn có ảnh đẹp!</small></article>
+            <article><span>💰 LỆ PHÍ</span><strong>100.000 VNĐ / người</strong><small>Thành viên CLB, KTS, Kỹ sư & bạn bè</small></article>
+            <article><span>🏆 GIẢI THƯỞNG</span><strong>Vô địch • Á quân • Hạng ba</strong><small>Cúp/cờ lưu niệm và quà BTC / sponsor</small></article>
+            <article><span>📞 LIÊN HỆ</span><strong>Mr. Hưng • 0976519039</strong><small>Hạn đăng ký: 16/08/2026</small></article>
+          </div>
+        </div>
+        <div class="schedule-update-note"><b>⚠ Đối chiếu thời gian:</b> poster giải trước đó ghi 19:30, trong khi sơ đồ thi đấu mới ghi khung 07:30–14:00. Website giữ nguyên thông tin poster ở phần thông tin giải và dùng khung giờ của sơ đồ mới tại mục Lịch thi đấu.</div>
+
+        <div class="section-head"><div><span class="eyebrow">NHANH & TRỰC QUAN</span><h3>Lộ trình 4 vòng đấu</h3><p>Thắng ở Vòng 1 vào Nhánh A, thua vào Nhánh B. Hai nhà vô địch nhánh gặp nhau ở Chung kết tổng.</p></div><button class="text-btn" onclick="document.querySelector('[data-target=groups]').click()">Xem sơ đồ →</button></div>
+        <div class="stage-preview" id="groupPreview"></div>
+      </section>
+
+      <section class="page" id="teams">
+        <div class="section-head team-section-head">
+          <div><span class="eyebrow">DANH SÁCH THAM DỰ</span><h3>16 đội tranh tài</h3><p>Bấm “Chỉnh sửa” trên từng đội để đổi mã đội, tên đội, khu vực/đơn vị và tên thành viên trong đội. Dữ liệu được lưu ngay trên trình duyệt.</p></div>
+          <div class="team-tools"><div class="search"><input id="teamSearch" placeholder="Tìm tên đội..." /></div><button class="ghost" id="resetTeamsBtn">Khôi phục đội mẫu</button></div>
+        </div>
+        <div class="teams-grid" id="teamsGrid"></div>
+      </section>
+
+      <section class="page" id="draw">
+        <div class="section-head draw-head">
+          <div>
+            <span class="eyebrow">BỐC THĂM</span>
+            <h3>Quay đồng thời 3 vòng</h3>
+            <p>Mỗi lượt quay sẽ chọn ra <b>1 Lông Thủ 1</b>, <b>1 Lông Thủ 2</b> và <b>1 vị trí cặp đấu</b>. Sau khi được chọn, tên/vị trí sẽ tự động loại khỏi danh sách còn lại.</p>
+          </div>
+          <div class="draw-actions-head">
+            <button class="ghost" id="resetDrawBtn">Khôi phục danh sách</button>
+          </div>
+        </div>
+
+        <div class="draw-grid">
+          <article class="draw-card">
+            <div class="draw-card-head">
+              <div>
+                <h4>Lông thủ 1</h4>
+                <span>Vòng quay 1</span>
+              </div>
+              <div class="draw-pill" id="drawCount1">16 tên</div>
+            </div>
+            <div class="wheel-wrap">
+              <div class="wheel-pointer"></div>
+              <canvas class="wheel-canvas" id="wheel1" width="360" height="360"></canvas>
+              <div class="wheel-center">LT1</div>
+            </div>
+            <div class="wheel-status" id="wheelResult1">Đang chờ</div>
+            <button class="draw-btn navy" id="spinWheel1">▶ Quay Lông Thủ 1</button>
+          </article>
+
+          <article class="draw-card">
+            <div class="draw-card-head">
+              <div>
+                <h4>Lông thủ 2</h4>
+                <span>Vòng quay 2</span>
+              </div>
+              <div class="draw-pill orange" id="drawCount2">16 tên</div>
+            </div>
+            <div class="wheel-wrap">
+              <div class="wheel-pointer"></div>
+              <canvas class="wheel-canvas" id="wheel2" width="360" height="360"></canvas>
+              <div class="wheel-center alt">LT2</div>
+            </div>
+            <div class="wheel-status" id="wheelResult2">Đang chờ</div>
+            <button class="draw-btn orange-btn" id="spinWheel2">▶ Quay Lông Thủ 2</button>
+          </article>
+
+          <article class="draw-card">
+            <div class="draw-card-head">
+              <div>
+                <h4>Vị trí cặp đấu</h4>
+                <span>Vòng quay 3</span>
+              </div>
+              <div class="draw-pill" id="drawCount3">16 vị trí</div>
+            </div>
+            <div class="wheel-wrap">
+              <div class="wheel-pointer"></div>
+              <canvas class="wheel-canvas" id="wheel3" width="360" height="360"></canvas>
+              <div class="wheel-center">VỊ TRÍ</div>
+            </div>
+            <div class="wheel-status" id="wheelResult3">Đang chờ</div>
+            <button class="draw-btn navy" id="spinWheel3">▶ Quay Vị Trí Cặp</button>
+          </article>
+        </div>
+
+        <div class="draw-global-actions">
+          <button class="mega-spin-btn" id="spinAllBtn">🎯 Quay cả 3 vòng</button>
+        </div>
+
+        <div class="pair-lock-card pair-lock-card-compact" id="pairLockCard">
+          <label class="pair-lock-switch pair-lock-switch-only" title="Bật / tắt ghép cặp cố định">
+            <input type="checkbox" id="pairLockEnabled" checked aria-label="Bật hoặc tắt ghép cặp cố định">
+            <span class="pair-switch-ui"></span>
+          </label>
+          <input class="pair-lock-hidden" type="number" id="pairLockLt1Index" min="1" value="2" tabindex="-1" aria-hidden="true">
+          <input class="pair-lock-hidden" type="number" id="pairLockLt2Index" min="1" value="3" tabindex="-1" aria-hidden="true">
+        </div>
+
+        <div class="draw-input-card">
+          <div class="draw-input-head">
+            <div>
+              <span class="draw-summary-label">NHẬP DỮ LIỆU BỐC THĂM</span>
+              <h4>Tùy chỉnh danh sách cầu thủ và vị trí</h4>
+              <p>Mỗi dòng là <b>1 mục</b>. Bạn có thể nhập lại danh sách cho <b>Lông thủ 1</b>, <b>Lông thủ 2</b> và <b>vị trí cặp đấu</b>, sau đó bấm <b>Cập nhật vòng quay</b>.</p>
+            </div>
+            <div class="draw-input-actions">
+              <button class="ghost" id="loadSampleBtn">Dùng dữ liệu mẫu</button>
+              <button class="primary" id="applyDrawDataBtn">Cập nhật vòng quay</button>
+            </div>
+          </div>
+          <div class="draw-input-grid">
+            <label>
+              <span>Lông thủ 1</span>
+              <textarea id="inputLt1" placeholder="Mỗi dòng 1 tên"></textarea>
+            </label>
+            <label>
+              <span>Lông thủ 2</span>
+              <textarea id="inputLt2" placeholder="Mỗi dòng 1 tên"></textarea>
+            </label>
+            <label>
+              <span>Vị trí cặp đấu</span>
+              <textarea id="inputPositions" placeholder="Ví dụ: Vị trí 01&#10;Vị trí 02"></textarea>
+            </label>
+          </div>
+        </div>
+
+        <div class="draw-bottom-grid">
+          <article class="draw-summary-card">
+            <span class="draw-summary-label">KẾT QUẢ GẦN NHẤT</span>
+            <h4 id="drawComboTitle">Chưa có lượt bốc thăm nào</h4>
+            <p id="drawComboText">Hãy bấm “Quay cả 3 vòng” để hệ thống chọn ngẫu nhiên Lông Thủ 1, Lông Thủ 2 và vị trí cặp đấu.</p>
+          </article>
+          <article class="draw-history-card">
+            <div class="history-head">
+              <h4>Lịch sử bốc thăm</h4>
+              <span id="drawHistoryCount">0 lượt</span>
+            </div>
+            <div class="history-list" id="drawHistoryList">
+              <div class="empty-history">Chưa có dữ liệu bốc thăm.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page" id="groups">
+        <div class="section-head"><div><span class="eyebrow">THỂ LỆ & SƠ ĐỒ ĐẤU</span><h3>16 đội • 4 vòng • 3 sân • 1 nhà vô địch</h3><p>Sơ đồ được cập nhật theo thể lệ chính thức. <b>Bấm trực tiếp vào tên đội hoặc mã A1/B1/BK/CK</b> để chỉnh đội ở từng vị trí.</p></div><div class="section-actions"><button class="ghost" data-open-slot-manager>✎ Quản lý đội / nhánh</button><button class="ghost" onclick="document.querySelector('[data-target=schedule]').click()">Xem lịch theo sân</button></div></div>
+        <div class="official-format-image"><img src="tournament-format.png" alt="Sơ đồ và thể lệ thi đấu 16 đội"></div>
+        <div class="format-grid" id="standingsGrid"></div>
+      </section>
+
+      <section class="page" id="schedule">
+        <div class="section-head"><div><span class="eyebrow">LỊCH THI ĐẤU • 3 SÂN</span><h3>Lịch 4 vòng theo sơ đồ</h3><p>Vòng 1 dùng danh sách 16 đội hiện tại. Với các vòng sau, bạn có thể <b>bấm vào A1/B1/BK/CK</b> để gán đội thực tế và thêm thông tin.</p></div><div class="schedule-head-actions"><button class="ghost compact" data-open-slot-manager>✎ Chỉnh đội / nhánh</button><div class="filters"><button class="filter active" data-filter="all">Tất cả</button><button class="filter" data-filter="round1">Vòng 1</button><button class="filter" data-filter="round2">Vòng 2</button><button class="filter" data-filter="round3">Vòng 3</button><button class="filter" data-filter="round4">Vòng 4</button></div></div></div>
+        <div class="schedule-timeline" id="scheduleTimeline"></div>
+        <div id="scheduleList"></div>
+      </section>
+
+      <section class="page" id="bracket">
+        <div class="section-head"><div><span class="eyebrow">NHÁNH THẮNG A • NHÁNH THUA B</span><h3>Road to Champion</h3><p>Vòng 1 phân nhánh. <b>Bấm vào từng ô A1/B1/BK/CK/Vô địch nhánh</b> để chọn đội hoặc nhập thông tin thủ công.</p></div><button class="ghost" data-open-slot-manager>✎ Quản lý đội / nhánh</button></div>
+        <div class="bracket-wrap" id="bracketWrap"></div>
+      </section>
+
+      <section class="page" id="rules">
+        <div class="section-head"><div><span class="eyebrow">THỂ LỆ CHÍNH THỨC</span><h3>Luật & lộ trình thi đấu</h3><p>Cập nhật theo sơ đồ mới: không còn vòng bảng 4 bảng.</p></div><button class="text-btn" onclick="document.querySelector('[data-target=groups]').click()">Mở sơ đồ đầy đủ →</button></div>
+        <div class="rules-grid tournament-rules">
+          <article><b>01</b><h4>Vòng 1 • 16 đội</h4><p>8 trận loại trực tiếp. Đội thắng của mỗi trận vào Nhánh Thắng A; đội thua vào Nhánh Thua B. Có 3 lượt trên 3 sân.</p></article>
+          <article><b>02</b><h4>Vòng 2 • Tứ kết nhánh</h4><p>8 đội Nhánh A đấu 4 trận tứ kết; 8 đội Nhánh B đấu 4 trận tứ kết. Tổng cộng 8 trận.</p></article>
+          <article><b>03</b><h4>Vòng 3 • Bán kết & CK nhánh</h4><p>4 trận bán kết nhánh tạo ra CK_A1, CK_A2, CK_B1, CK_B2; sau đó đấu 2 trận Chung kết nhánh để tìm Vô địch Nhánh A và Vô địch Nhánh B.</p></article>
+          <article><b>04</b><h4>Vòng 4 • Chung kết tổng</h4><p>Vô địch Nhánh A gặp Vô địch Nhánh B tại Sân 1. Đội thắng là Nhà Vô Địch toàn giải.</p></article>
+          <article><b>15'</b><h4>Thời lượng mỗi trận</h4><p>Theo ghi chú trên sơ đồ, mỗi trận dự kiến 15 phút. BTC có thể điều chỉnh để đảm bảo tiến độ thực tế.</p></article>
+          <article><b>23</b><h4>Tổng số trận</h4><p>Vòng 1: 8 trận • Vòng 2: 8 trận • Vòng 3: 6 trận • Vòng 4: 1 trận. Tổng cộng 23 trận.</p></article>
+        </div>
+        <div class="rule-branch-note">
+          <div class="branch-badge branch-a">A</div><div><b>Nhánh Thắng</b><span>Đội thắng ở Vòng 1 đi vào Nhánh A.</span></div>
+          <div class="branch-badge branch-b">B</div><div><b>Nhánh Thua</b><span>Đội thua ở Vòng 1 vẫn tiếp tục thi đấu tại Nhánh B.</span></div>
+        </div>
+      </section>
+
+      <footer>KIẾN TRÚC VIỆT BADMINTON CLUB 2026 <span>•</span> Tournament Dashboard • v8</footer>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="teamEditModal" aria-hidden="true">
+    <div class="edit-modal" role="dialog" aria-modal="true" aria-labelledby="teamEditTitle">
+      <div class="edit-modal-head">
+        <div><span class="eyebrow">CHỈNH SỬA ĐỘI THAM GIA</span><h3 id="teamEditTitle">Thông tin đội</h3></div>
+        <button class="modal-close" id="closeTeamModal" aria-label="Đóng">×</button>
+      </div>
+      <form id="teamEditForm">
+        <input type="hidden" id="editTeamOriginalId">
+        <div class="edit-form-grid">
+          <label><span>Mã đội</span><input id="editTeamId" maxlength="4" required placeholder="A1"></label>
+          <label><span>Vị trí Vòng 1</span><input id="editTeamGroup" disabled title="Vị trí thi đấu được cố định theo thứ tự 1–16"></label>
+          <label class="full"><span>Tên đội</span><input id="editTeamName" required placeholder="Tên đội"></label>
+          <label class="full"><span>Khu vực / đơn vị</span><input id="editTeamCity" required placeholder="Hà Nội / Công ty / CLB..."></label>
+          <label><span>Thành viên 1</span><input id="editMember1" placeholder="Tên thành viên 1"></label>
+          <label><span>Thành viên 2</span><input id="editMember2" placeholder="Tên thành viên 2"></label>
+        </div>
+        <div class="edit-modal-actions"><button type="button" class="ghost" id="cancelTeamEdit">Hủy</button><button type="submit" class="primary">Lưu thay đổi</button></div>
+      </form>
+    </div>
+  </div>
+
+
+  <div class="modal-backdrop" id="slotEditModal" aria-hidden="true">
+    <div class="edit-modal slot-edit-modal" role="dialog" aria-modal="true" aria-labelledby="slotEditTitle">
+      <div class="edit-modal-head">
+        <div><span class="eyebrow">CẬP NHẬT VỊ TRÍ THI ĐẤU</span><h3 id="slotEditTitle">Vị trí A1</h3><p class="modal-help">Gán một đội hiện có vào vị trí này hoặc nhập thông tin tùy chỉnh.</p></div>
+        <button class="modal-close" id="closeSlotModal" aria-label="Đóng">×</button>
+      </div>
+      <form id="slotEditForm">
+        <input type="hidden" id="editSlotCode">
+        <div class="edit-form-grid">
+          <label class="full"><span>Chọn đội từ danh sách 16 đội</span><select id="editSlotTeam"><option value="">— Chưa xác định / nhập thủ công —</option></select></label>
+          <label class="full"><span>Tên hiển thị tùy chỉnh</span><input id="editSlotCustomName" placeholder="Để trống nếu dùng tên đội đã chọn"></label>
+          <label><span>Thành viên 1 (tùy chỉnh)</span><input id="editSlotMember1" placeholder="Để trống để lấy từ đội"></label>
+          <label><span>Thành viên 2 (tùy chỉnh)</span><input id="editSlotMember2" placeholder="Để trống để lấy từ đội"></label>
+          <label class="full"><span>Ghi chú / kết quả</span><input id="editSlotNote" placeholder="Ví dụ: Thắng 21-18, 21-15 / Seed 1 / Đã xác nhận..."></label>
+        </div>
+        <div class="slot-preview" id="slotEditPreview"></div>
+        <div class="edit-modal-actions"><button type="button" class="danger-ghost" id="clearSlotAssignment">Xóa dữ liệu vị trí</button><span class="modal-spacer"></span><button type="button" class="ghost" id="cancelSlotEdit">Hủy</button><button type="submit" class="primary">Lưu vị trí</button></div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="slotManagerModal" aria-hidden="true">
+    <div class="edit-modal slot-manager-modal" role="dialog" aria-modal="true" aria-labelledby="slotManagerTitle">
+      <div class="edit-modal-head">
+        <div><span class="eyebrow">QUẢN LÝ SƠ ĐỒ</span><h3 id="slotManagerTitle">Đội trong các nhánh</h3><p class="modal-help">Chọn một vị trí để cập nhật nhanh. Các thay đổi sẽ đồng bộ sang Sơ đồ, Lịch thi đấu và Nhánh A/B.</p></div>
+        <button class="modal-close" id="closeSlotManager" aria-label="Đóng">×</button>
+      </div>
+      <div class="slot-manager-toolbar"><span id="slotManagerStatus">0 vị trí đã gán</span><button class="danger-ghost" id="resetSlotAssignments">Khôi phục nhánh trống</button></div>
+      <div class="slot-manager-groups" id="slotManagerGroups"></div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
