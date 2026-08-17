@@ -71,9 +71,10 @@ export default async (req) => {
     }
 
     return json({
-      ok: true,
-      token: makeToken()
-    });
+  ok: true,
+  token: makeToken(),
+  expiresAt: Date.now() + 12 * 60 * 60 * 1000
+});
   } catch (error) {
     return json(
       {
