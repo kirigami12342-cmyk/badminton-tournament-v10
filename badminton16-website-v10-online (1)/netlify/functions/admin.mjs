@@ -13,15 +13,21 @@ function json(data, status = 200) {
 function safeEqual(a, b) {
   const left = Buffer.from(String(a || ''));
   const right = Buffer.from(String(b || ''));
-  return left.length === right.length && timingSafeEqual(left, right);
+
+  if (left.length !== right.length) {
+    return false;
+  }
+
+  return timingSafeEqual(left, right);
 }
 
-function makeToken() {
+function makeAdminToken() {
   const secret = process.env.ADMIN_TOKEN_SECRET || '';
+
   const payload = Buffer.from(
     JSON.stringify({
       role: 'admin',
-      exp: Math.floor(Date.now() / 1000) + 60 * 60 * 12
+      exp: Math.floor(Date.now() / 1000) + 12 * 60 * 60
     })
   ).toString('base64url');
 
@@ -32,7 +38,7 @@ function makeToken() {
   return `${payload}.${signature}`;
 }
 
-export default async (req) => {
+export default async function handler(req) {
   if (req.method !== 'POST') {
     return json(
       {
@@ -60,6 +66,16 @@ export default async (req) => {
     const body = await req.json();
     const password = String(body?.password || '');
 
+    if (!password) {
+      return json(
+        {
+          ok: false,
+          error: 'Vui lòng nhập mật khẩu Admin.'
+        },
+        400
+      );
+    }
+
     if (!safeEqual(password, adminPassword)) {
       return json(
         {
@@ -70,18 +86,22 @@ export default async (req) => {
       );
     }
 
+    const token = makeAdminToken();
+
     return json({
-  ok: true,
-  token: makeToken(),
-  expiresAt: Date.now() + 12 * 60 * 60 * 1000
-});
+      ok: true,
+      token,
+      expiresAt: Date.now() + 12 * 60 * 60 * 1000
+    });
   } catch (error) {
+    console.error('Admin login error:', error);
+
     return json(
       {
         ok: false,
-        error: error?.message || 'Không thể đăng nhập Admin.'
+        error: 'Không thể đăng nhập Admin.'
       },
       500
     );
   }
-};
+}
